@@ -4,6 +4,6 @@ xhr.onreadystatechange = function() {
 		            alert(xhr.responseText);
 		        }
 }
-xhr.open('GET', 'https://www.instacart.com/', true);
+xhr.open('GET', 'https://www.instacart.com/store', true);
 xhr.withCredentials = true;
 xhr.send(null);
