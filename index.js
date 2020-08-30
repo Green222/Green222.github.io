@@ -2,6 +2,7 @@ var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (xhr.readyState == XMLHttpRequest.DONE) {
 		alert(xhr.responseText);
+		alert(xhr.getAllResponseHeaders())
 	}
 }
 const json = {"visit_token":"e2cb2e49-2df8-4c6e-b67d-6bc1a6369e58"}
