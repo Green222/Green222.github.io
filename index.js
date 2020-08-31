@@ -2,8 +2,9 @@
 var xhr2 = new XMLHttpRequest();
 xhr2.onreadystatechange = function() {
 	if (xhr2.readyState == XMLHttpRequest.DONE) {
-		var json = JSON.parse(xhr2.responseText);
-		alert(json["current_user"]);
+		var user = JSON.parse(xhr2.responseText);
+		console.log(user)
+		alert(user);
 	}
 }
 xhr2.withCredentials = true;
@@ -33,7 +34,7 @@ xhr3.send(null)
 var xhr4 = new XMLHttpRequest();
 xhr4.onreadystatechange = function() {
 	if (xhr4.readyState == XMLHttpRequest.DONE) {
-		alert(xhr4.responseText);
+		//alert(xhr4.responseText);
 	}
 }
 xhr4.withCredentials = true;
