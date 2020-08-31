@@ -3,7 +3,7 @@ var xhr2 = new XMLHttpRequest();
 xhr2.onreadystatechange = function() {
 	if (xhr2.readyState == XMLHttpRequest.DONE) {
 		var user = JSON.parse(xhr2.responseText);
-		alert(user["bundle"]["current_user"]);
+		alert(JSON.stringify(user["bundle"]["current_user"]));
 	}
 }
 xhr2.withCredentials = true;
